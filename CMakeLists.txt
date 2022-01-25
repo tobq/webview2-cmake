@@ -5,9 +5,10 @@ target_include_directories(webview INTERFACE include)
 
 if (AMD64 STREQUAL ${CMAKE_SYSTEM_PROCESSOR})
     set(ARCH x64)
+elseif(ARM64 STREQUAL ${CMAKE_SYSTEM_PROCESSOR})
+    set(ARCH arm64)
 else()
     set(ARCH x86)
-    #[[TODO: handle arm64 ...]]
 endif()
 message(STATUS webview-architecture=${ARCH})
 
