@@ -1,2 +1,4 @@
 include-winrt
 Microsoft.Web.WebView2.targets
+.idea
+cmake-build-*
